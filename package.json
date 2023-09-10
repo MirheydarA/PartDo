@@ -1,0 +1,19 @@
+{
+  "name": "partdo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:scss": "sass styles/scss/main.scss styles/css/main.css",
+    "compile:scss:watch": "sass  styles/scss/main.scss styles/css/main.css --watch",
+    "build": "postcss src/styles.css -o dist/output.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.61.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  }
+}
