@@ -149,13 +149,13 @@
         </label>
 
         <div class="flex flex-col relative group">
-          <div class="flex flex-col justify-center">
+          <div class="flex flex-col justify-center cursor-pointer">
             <span class="font-semibold text-[14px]">My Account</span>
             <span class="text-[12px]">Hello, Sign In</span>
           </div>
 
           <div
-            class="absolute w-[260px] text-center top-10 right-[-10px] hidden group-hover:block rounded-lg shadow-md p-2"
+            class="absolute w-[260px] text-center top-10 right-[-10px] hidden group-hover:block rounded-lg shadow-md p-2 z-10 bg-white"
           >
             <p class="mb-4">Sign up now and enjoy discounted shopping!</p>
             <a
@@ -164,7 +164,7 @@
               >Log In</a
             >
             <div class="mt-[15px]">
-              New Costumer? <a href="" class="">Sign Up</a>
+              New Costumer? <a href="" class="underline">Sign Up</a>
             </div>
           </div>
         </div>
@@ -193,14 +193,13 @@
         </div>
       </div>
 
-      <div class="border-b shadow-xl"></div>
+      <!-- <div class="drop-shadow-xl"></div> -->
+      <hr class="text-gray drop-shadow-2xl" >
     </header>
     <!-- header ends -->
 
     <!-- Responsive Header Start-->
     <header>
-      <!-- <div class="block xl:hidden border-[3px] text-[#f80000] w-full  "></div> -->
-
       <div
         class="responsive-header block xl:hidden w-full mx-auto fixed top-0 bg-white z-20 border-b"
       >
@@ -417,15 +416,15 @@
     <!-- Responsive Header Ends -->
 
     <!-- Main Starts -->
-    <div class="">
+    <div class="container mx-auto ">
       <section>
         <div class="searchandorder-container mt-[100px] xl:mt-[40px]">
-          <div class="card relative sm:mx-[80px] msm:mx-[30px]">
-            <div class="img-container flex justify-center overflow-hidden h-[269px] mid:h-auto ">
+          <div class="card relative">
+            <div class="img-container flex justify-center overflow-hidden h-[269px] mid:h-auto w-full ">
               <img
                 src="https://klbtheme.com/partdo/wp-content/uploads/2022/12/banner-31.jpg"
                 alt=""
-                class="rounded-[12px] object-cover "/>
+                class="rounded-[12px] object-cover w-full"/>
             </div>
 
             <div
@@ -456,7 +455,7 @@
       </section>
 
       <section>
-        <div class="xl:mx-[80px] mxl:mx-[50px] mmd:mx-[20px] mt-4 flex">
+        <div class="mt-4 flex">
           <div class="LeftPart w-[29%] hidden md:block">
             <div class="Find the Right Parts Faster">
               <h4 class="font-semibold text-[15px]">
@@ -471,7 +470,7 @@
               <div class="">
                 <select
                   id="small"
-                  class="block + p-2 mb-4 mt-5 text-sm text-[gray] w-full border border-[#686868] rounded-xl bg-gray-50"
+                  class="block + p-2 mb-4 mt-5 text-sm text-[gray] w-full border border-[#686868] rounded-xl outline-red bg-gray-50"
                 >
                   <option selected>Choose a country</option>
                   <option value="US">United States</option>
@@ -484,7 +483,7 @@
               <div class="">
                 <select
                   id="small"
-                  class="block + p-2 mb-4 text-sm text-[gray] w-full border border-[#686868] rounded-xl bg-gray-50"
+                  class="block + p-2 mb-4 text-sm text-[gray] w-full border border-[#686868] outline-red rounded-xl bg-gray-50"
                 >
                   <option selected>Choose a country</option>
                   <option value="US">United States</option>
@@ -497,7 +496,7 @@
               <div class="">
                 <select
                   id="small"
-                  class="block + p-2 mb-4 text-sm text-[gray] w-full border border-[#686868] rounded-xl bg-gray-50"
+                  class="block + p-2 mb-4 text-sm text-[gray] w-full border border-[#686868] outline-red rounded-xl bg-gray-50"
                 >
                   <option selected>Choose a country</option>
                   <option value="US">United States</option>
@@ -510,7 +509,7 @@
               <div class="">
                 <select
                   id="small"
-                  class="block + p-2 mb-4 text-sm text-[gray] w-full border border-[#686868] rounded-xl bg-gray-50"
+                  class="block + p-2 mb-4 text-sm text-[gray] w-full border border-[#686868] outline-red rounded-xl bg-gray-50"
                 >
                   <option selected>Choose a country</option>
                   <option value="US">United States</option>
@@ -707,25 +706,24 @@
           </div>
 
           <div class="RightPart w-full md:pl-[40px]">
-            <div class="bg-[#e6e6e6] py-2 px-4 rounded-xl flex justify-between ">
+            <div class="bg-[#e6e6e6] py-2 px-4 rounded-xl flex justify-between md:hidden">
               <div class="flex items-center">
-                <a href="" class="flex items-center" onclick="openNav()">
+
+                <!-- <a href="#" class="flex items-center" onclick="openNav()"> -->
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-filter" viewBox="0 0 16 16">
                     <path d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
                   </svg>
-                  <span class="ml-1 font-semibold">Filter</span>
-                </a>
+                  <!-- <span class="ml-1 font-semibold">Filter</span> -->
+                <!-- </a> -->
 
 
                 <!-- hamburger menu -->
                 <div class="hamburger-menu">
                   <div
                     id="mySidenav2"
-                    class="sidenav h-full fixed bg-[#ffffff] overflow-x-hidden transition-0.5s top-0 left-0 w-0"
-                  >
+                    class="sidenav h-full fixed bg-[#ffffff] overflow-x-hidden transition-0.5s top-0 left-0 w-0">
                     <div
-                      class="menu-header flex justify-between items-center py-[15px] px-[24px]"
-                    >
+                      class="menu-header flex justify-between items-center py-[15px] px-[24px]">
                       <div class="logo w-[147px]">
                         <img
                           class="w-full"
@@ -734,16 +732,16 @@
                         />
                       </div>
                       <a
-                        href="javascript:void(0)"
-                        class="closebtn flex items-center justify-center rounded-[20%] font-semibold text-[36px]"
-                        onclick="closeNav()"
-                        >&times;</a
-                      >
+                  href="javascript:void(0)"
+                  class="closebtn flex z-50 mt-[100px] items-center justify-center rounded-[20%] font-semibold text-[36px]"
+                  onclick="closeNav2()"
+                  >&times;</a
+                >
                     </div>
       
                   </div>
       
-                  <span style="font-size: 30px; cursor: pointer" onclick="openNav()">Filter </span>
+                  <span style="font-size: 30px; cursor: pointer" onclick="openNav2()">Filter </span>
                 </div>
 
               </div>
@@ -1321,9 +1319,7 @@
       </section>
 
       <section>
-        <div
-          class="email py-[60px] xl:mx-[80px] mxl:mx-[50px] mmd:mx-[20px] mid:grid mid:grid-cols-2 flex flex-col"
-        >
+        <div class="email py-[60px] container mx-auto mid:grid mid:grid-cols-2 flex flex-col">
           <div class="email-left flex pr-[60px]">
             <div class="envelope-icon mid:block hidden">
               <i
@@ -1382,75 +1378,75 @@
         </div>
       </section>
 
-      <section>
-        <div class="flex justify-between fixed bottom-0 bg-white w-full px-10 md:hidden">
-          <div class="flex flex-col items-center py-4">
-            <a href="" class="flex flex-col items-center">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                fill="currentColor"
-                class="bi bi-house-door"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z"
-                />
-              </svg>
-              <span class="text-[10px] mt-2">HOME</span>
-            </a>
-          </div>
-
-          <div class="flex flex-col items-center py-4">
-            <a href="" class="flex flex-col items-center">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                fill="currentColor"
-                class="bi bi-filter"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"
-                />
-              </svg>
-              <span class="text-[10px] mt-2">FILTER</span>
-            </a>
-          </div>
-
-          <div class="flex flex-col items-center py-4">
-
-            <a href="" class="flex flex-col items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-              </svg>            
-              <span class="text-[10px] mt-2">SEARCH</span>
-            </a>
-          </div>
-
-          <div class="flex flex-col items-center py-4">
-            <a href="" class="flex flex-col items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
-                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
-              </svg>          
-              <span class="text-[10px] mt-2">HEART</span>
-            </a>
-          </div>
-
-          <div class="flex flex-col items-center py-4">
-            <a href="" class="flex flex-col items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
-                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
-              </svg>        
-              <span class="text-[10px] mt-2">HEART</span>
-            </a>
-          </div>
-        </div>
-      </section>
     </div>
     <!-- Main Ends -->
+
+    <section class="responsive navbar-bottom">
+      <div class="flex justify-between fixed bottom-0 bg-white w-full px-10 md:hidden border-t border-[#cbcbcb]">
+        <div class="flex flex-col items-center py-4">
+          <a href="#" class="flex flex-col items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="currentColor"
+              class="bi bi-house-door"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z"
+              />
+            </svg>
+            <span class="text-[10px] mt-2">HOME</span>
+          </a>
+        </div>
+
+        <div class="flex flex-col items-center py-4">
+          <a href="#" class="flex flex-col items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="currentColor"
+              class="bi bi-filter"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+            <span class="text-[10px] mt-2">FILTER</span>
+          </a>
+        </div>
+
+        <div class="flex flex-col items-center py-4">
+
+          <a href="#" class="flex flex-col items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+            </svg>            
+            <span class="text-[10px] mt-2">SEARCH</span>
+          </a>
+        </div>
+
+        <div class="flex flex-col items-center py-4">
+          <a href="#" class="flex flex-col items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+              <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+            </svg>          
+            <span class="text-[10px] mt-2">HEART</span>
+          </a>
+        </div>
+
+        <div class="flex flex-col items-center py-4">
+          <a href="#" class="flex flex-col items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+              <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+            </svg>        
+            <span class="text-[10px] mt-2">HEART</span>
+          </a>
+        </div>
+      </div>
+    </section>
 
     <!-- Footer Start -->
     <footer>
@@ -1671,15 +1667,15 @@
     }
   </script>
 
-    <!-- hamburger-menu -->
-    <script>
-      function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
+  <!-- hamburger-menu -->
+  <script>
+      function closeNav2() {
+        document.getElementById("mySidenav2").style.width = "0";
       }
-      function openNav() {
-        document.getElementById("mySidenav").style.width = "350px";
+      function openNav2() {
+        document.getElementById("mySidenav2").style.width = "350px";
       }
-    </script>
+  </script>
 
   <!-- Multi Range Slider -->
   <script>
