@@ -4,3 +4,15 @@ input[type=range]::-webkit-slider-thumb {
 	height: 24px;
 	-webkit-appearance: none;
 }
+
+
+
+
+.product{
+	transition: 0.3s;
+}
+
+.product-container:hover > :not(:hover){
+	/* filter: blur(2px); */
+	opacity: .2;
+}

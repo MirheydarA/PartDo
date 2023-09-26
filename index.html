@@ -26,44 +26,54 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Slider End -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.7.6/dist/full.css" rel="stylesheet" type="text/css" />
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
+  <!-- Tailwind cdn     -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"  rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
 
 
-    <!-- ///// -->
-    <!-- <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    /> -->
-
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.2/flexslider.css"
-    /> -->
-
-    <!-- <link rel="stylesheet" href="flex.css" /> -->
-    <!-- <link
-      href="https://fonts.googleapis.com/css?family=Roboto"
-      rel="stylesheet"
-      type="text/css"
-    /> -->
-
-
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"> -->
-
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script> -->
-
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.2/jquery.flexslider.js"></script> -->
-
+   
     <title>Home - Partdo</title>
 
     <link rel="stylesheet" href="./dist/output.css" />
     <link rel="stylesheet" href="./styles/css/index.css">
+    <link rel="stylesheet" href="./styles/css/shop.css">
 
   </head>
   <body>
     <!-- header start -->
     <header>
+      <div class="bg-container flex justify-around items-center py-5">
+        <div class="flex items-center">
+          <span class="text-white text-[13px] border-r border-border pr-2">
+            May Edition Black Friday! 35% Off Spare Parts.
+          </span>
+          <span class="text-white text-[13px] pl-3">
+            Free carbon neutral shipping on US orders $50+.
+          </span>
+        </div>
+
+        <div id="clockdiv" class="launch-time font-thin text-center text-[20px] flex items-center">
+          <h3 class="text-[14px] font-semibold mr-3 text-white">End of Time:</h3>
+          <div class="rounded-lg  flex items-center justify-center py-[4px] w-[25px] h-[25px]">
+            <span id="days" class="days  bg-black opacity-20 rounded-lg text-white text-[16px] w-full"></span>
+          </div>
+          <span class="">:</span>
+          <div class="rounded-lg  flex items-center justify-center py-[4px] w-[25px] h-[25px]">
+            <span id="hours" class="hours  bg-black opacity-20 rounded-lg text-white text-[16px] w-full"></span>
+          </div>
+          <span>:</span>
+          <div class="rounded-lg  flex items-center justify-center py-[4px] w-[25px] h-[25px]">
+            <span id="minutes" class="minutes  bg-black opacity-20 rounded-lg text-white text-[16px] w-full"></span>
+          </div>
+          <span>:</span>
+          <div class="rounded-lg  flex items-center justify-center py-[4px] w-[25px] h-[25px]">
+            <span id="seconds" class="seconds  bg-black opacity-20 rounded-lg text-white text-[16px] w-full"></span>
+          </div>
+        </div>
+
+      </div>
+
       <div class="header xl:block hidden">
         <div class="header-top flex justify-around items-center">
           <div class="header-top-left mr-[50px]">
@@ -84,43 +94,43 @@
 
             <div class="vertical-line border-l border-border h-[42px] mx-5"></div>
 
-            <div class="flex items-center z-20">
+            <div class="flex items-center">
               <div class="dropdown group relative inline-block" id="myDropdown">
                 <span
                   class="text-xs cursor-pointer hover:text-[red] transition duration-300 ease-in-out"
                 >
                   English <i class="fa-solid fa-caret-down ml-1"></i>
                 </span>
-                <div
-                  class="dropdown-content hidden absolute left-[-25px] top-[22px] bg-[#ffffff] text-xs py-1 px-2 pt-6 group-hover:flex flex-col rounded-lg shadow-lg"
-                >
+                <div class="absolute left-[-16px] top-[22px] text-xs py-1 px-2 pt-6 group-hover:flex flex-col  bg-[#ffffff] hidden rounded-lg shadow-lg z-50">
                   <a
                     href="#"
-                    class="hover:bg-[#ffddddd5] px-5 py-1 rounded-lg transition duration-300 ease-in-out"
+                    class="hover:bg-[#ffddddd5] px-3 my-1 rounded-lg transition duration-300 ease-in-out"
                     >English</a
                   >
                   <a
                     href="#"
-                    class="mt-1 hover:bg-[#ffddddd5] px-5 py-1 rounded-lg transition duration-300 ease-in-out"
+                    class="mt-1 hover:bg-[#ffddddd5] px-3 py-1 rounded-lg transition duration-300 ease-in-out"
                     >Spanish</a
                   >
                   <a
                     href="#"
-                    class="mt-1 hover:bg-[#ffddddd5] px-5 py-1 rounded-lg transition duration-300 ease-in-out"
+                    class="mt-1 hover:bg-[#ffddddd5] px-3 py-1 rounded-lg transition duration-300 ease-in-out"
                     >German</a
                   >
                 </div>
               </div>
   
-              <div class="dropdown group relative inline-block ml-5" id="myDropdown">
+              <div
+                class="dropdown group relative inline-block ml-10"
+                id="myDropdown"
+              >
                 <span
                   class="text-xs cursor-pointer hover:text-[red] transition duration-300 ease-in-out"
                 >
                   USD <i class="fa-solid fa-caret-down ml-1"></i>
                 </span>
-                <div
-                  class="dropdown-content hidden absolute left-[-22px] top-[22px] bg-[#ffffff] group-hover:block text-xs py-1 px-2 pt-6 group-hover:flex flex-col rounded-lg shadow-lg"
-                >
+
+                <div class="absolute left-[-16px] top-[22px] text-xs py-1 px-2 pt-6 group-hover:flex flex-col  bg-[#ffffff] hidden rounded-lg shadow-lg z-50">
                   <a
                     href="#"
                     class="hover:bg-[#ffddddd5] px-5 py-1 rounded-lg transition duration-300 ease-in-out"
@@ -150,17 +160,19 @@
         <div class="header-bottom flex justify-around">
           <div class="header-bottom-left flex">
             <div class="logo flex items-center py-[21px]">
-              <img src="assests/img/PartDo-Logo.png" class="w-[164px]" alt="" />
+              <a href="./index.html">
+                <img src="assests/img/PartDo-Logo.png" class="w-[164px]" alt="" />
+              </a>
             </div>
 
             <div class="nav-page flex items-center ml-5">
               <ul class="flex items-center">
-                <li class="px-[15px]"><a class="font-medium" href="./index.html">Home</a></li>
-                <li class="px-[15px]"><a class="font-medium" href="./shop.html">Shop</a></li>
-                <li class="px-[15px]"><a class="font-medium" href="./shop.html"> Tires & Wheels</a></li>
-                <li class="px-[15px]"><a class="font-medium" href="./shop.html">Interior Accesories</a></li>
-                <li class="px-[15px]"><a class="font-medium" href="./blog.html">Blog</a></li>
-                <li class="px-[15px]"><a class="font-medium" href="./contact.html">Contact</a></li>
+                <li class="px-[15px]"><a class="font-medium hover:text-red duration-200" href="./index.html">Home</a></li>
+                <li class="px-[15px]"><a class="font-medium hover:text-red duration-200" href="./shop.html">Shop</a></li>
+                <li class="px-[15px]"><a class="font-medium hover:text-red duration-200" href="./shop.html"> Tires & Wheels</a></li>
+                <li class="px-[15px]"><a class="font-medium hover:text-red duration-200" href="./shop.html">Interior Accesories</a></li>
+                <li class="px-[15px]"><a class="font-medium hover:text-red duration-200" href="./blog.html">Blog</a></li>
+                <li class="px-[15px]"><a class="font-medium hover:text-red duration-200" href="./contact.html">Contact</a></li>
               </ul>
             </div>
           </div>
@@ -169,9 +181,10 @@
             <a href="./my-account.html"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
               <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
             </svg></a>
-            <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-            </svg></a>
+
+  <span href="" data-modal-target="defaultModal" data-modal-toggle="defaultModal" class="cursor-pointer"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+  </svg></span>
 
             <a class="relative" href="./wishlist.html">
               <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-suit-heart" viewBox="0 0 16 16">
@@ -189,6 +202,36 @@
           </div>
         </div>
       </div>
+
+<!-- Main modal -->
+<div id="defaultModal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full overflow-y-auto md:inset-0 h-screen">
+    <div class="relative w-full max-h-full">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700 w-full">
+            <!-- Modal body -->
+            <div class="flex flex-col items-center justify-center h-screen w-full px-16">
+                <p class=" text-[26px] leading-relaxed text-gray-500 dark:text-gray-400">
+                  What are you looking for in Partdo
+                </p>
+                <p class="mt-4 w-full">
+                  <form class="w-full" action="" >
+                    <div class="w-full relative">
+                      <input class="border border-[#c1c1c1] h-[52px] rounded-xl px-4 text-[13px] focus:outline-[#ededed] focus:outline-offset-2 outline-8 w-full" placeholder="Search for products" type="text">
+                      
+                      <div class="absolute top-[14px] right-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </form>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
     </header>
     <!-- header ends -->
 
@@ -630,7 +673,7 @@
         </div>
       </section>
 
-       <section class="FeaturedProducts"> 
+      <section class="FeaturedProducts"> 
         <div class="featured-products mt-[30px] mb-[100px]">
           <div class="featured-products-header text-[24px] font-semibold flex justify-between">
             <div class="featured-products-header-left flex">
@@ -646,7 +689,7 @@
                       Auto Safety & Security
                   </button>
 
-                  <button class="tablinks rounded-[8px] cursor-pointer px-3 py-[5px] transition-[0.3s] hover:bg-[#ddd]"                    onclick="openCity(event, 'interior')">
+                  <button class="tablinks rounded-[8px] cursor-pointer px-3 py-[5px] transition-[0.3s] hover:bg-[#ddd]" onclick="openCity(event, 'interior')">
                     Interiror Accessories
                   </button>
 
@@ -677,7 +720,7 @@
             <div id="safety" class="tabcontent">
                 <div class="owl-slider">
                   <div id="carousel" class="owl-carousel">
-                    <div class="item">
+                    <div class="item border-none">
                       <div class="img">
                         <img
                           src="https://cdn.europosters.eu/image/1300/zen-nature-i49609.jpg"
@@ -1111,35 +1154,40 @@
         <div class="on-sale flex flex-col mid:flex-row gap-8 mt-10">
 
           <div class="on-sale-left mid:w-[42%]">
-            <div class="cards bg-[url('https://klbtheme.com/partdo/wp-content/uploads/2022/10/banner-12.jpg')] bg-cover bg-center h-full rounded-xl ">
-
-              <div class="card-content flex flex-col items-start rounded-[5px] text-[16px] p-[40px]">
-                <span class="red-bgc bg-partdored text-white rounded-[40px] text-[13px] font-bold py-[3px] px-[10px]">On Sale This Week</span>
-                <span class="title text-[22px] mid:text-[28px] font-bold mid:w-[350px] mt-[15px] leading-tight">Wide Selection of Quality Auto Parts at the Lowest Prices</span>
-                <span class="desc text-[13px] text-[#646464] mt-[10px]">Plakrore maheten. Astronens ultranirad. Dod. Mms pal. Fysisk cd megade vägisk.  </span>
-                <span class="shopnow text-[14px] mt-[10px] font-semibold"><a href="">Shop Now <i class="fa-solid fa-arrow-right ml-2"></i></a></span>
+            <div class="rounded-xl overflow-hidden h-full">
+              <div class="cards bg-[url('https://klbtheme.com/partdo/wp-content/uploads/2022/10/banner-12.jpg')] bg-cover h-full hover:scale-110 duration-500 cursor-pointer rounded-xl">
+                <div class="card-content flex flex-col items-start rounded-[5px] text-[16px] p-[40px]">
+                  <span class="red-bgc bg-partdored text-white rounded-[40px] text-[13px] font-bold py-[3px] px-[10px]">On Sale This Week</span>
+                  <span class="title text-[22px] mid:text-[28px] font-bold mid:w-[350px] mt-[15px] leading-tight">Wide Selection of Quality Auto Parts at the Lowest Prices</span>
+                  <span class="desc text-[13px] text-[#646464] mt-[10px]">Plakrore maheten. Astronens ultranirad. Dod. Mms pal. Fysisk cd megade vägisk.  </span>
+                  <span class="shopnow text-[14px] mt-[10px] font-semibold"><a href="">Shop Now <i class="fa-solid fa-arrow-right ml-2"></i></a></span>
+                </div>
+  
               </div>
-
-            </div>
+            </div> 
           </div>
 
-          <div class="on-sale-right mid:grid mid:grid-rows-2 mid:overflow-hidden mid:w-[58%]">
+          <div class="on-sale-right mid:grid mid:grid-rows-2 mid:overflow-hidden mid:w-[58%] gap-8">
 
-            <div class="cards bg-[url('https://klbtheme.com/partdo/wp-content/uploads/2022/10/banner-11.jpg')]  bg-cover bg-center mid:h-full rounded-xl">  
-              <div class="card-content flex flex-col items-start rounded-[5px] text-[16px] p-[40px]">
-                <span class="red-bgc bg-partdored text-white rounded-[40px] text-[13px] font-bold py-1 px-[10px]">On Sale This Week</span>
-                <span class="title text-[22px] mid:text-[28px] font-bold mid:w-[350px] mt-[15px] leading-tight">A New Level Of Comfort Tested For Your Safety</span>
-                <span class="desc text-[13px] text-[#646464] mt-[10px] mid:w-[350px]">Plakrore mahetan.Astronens ultranirad.Dod.</span>
-                <span class="shopnow text-[14px] mt-[10px] font-semibold"><a href="">Shop Now <i class="fa-solid fa-arrow-right"></i></a></span>
+            <div class="rounded-xl overflow-hidden">
+              <div class="cards bg-[url('https://klbtheme.com/partdo/wp-content/uploads/2022/10/banner-11.jpg')]  bg-cover mid:h-full hover:scale-110 duration-500 cursor-pointer rounded-xl">  
+                <div class="card-content flex flex-col items-start text-[16px] p-[40px] rounded-xl">
+                  <span class="red-bgc bg-partdored text-white rounded-[40px] text-[13px] font-bold py-1 px-[10px]">On Sale This Week</span>
+                  <span class="title text-[22px] mid:text-[28px] font-bold mid:w-[350px] mt-[15px] leading-tight">A New Level Of Comfort Tested For Your Safety</span>
+                  <span class="desc text-[13px] text-[#646464] mt-[10px] mid:w-[350px]">Plakrore mahetan.Astronens ultranirad.Dod.</span>
+                  <span class="shopnow text-[14px] mt-[10px] font-semibold"><a href="">Shop Now <i class="fa-solid fa-arrow-right"></i></a></span>
+                </div>
               </div>
             </div>
 
-            <div class="cards bg-[url('https://klbtheme.com/partdo/wp-content/uploads/2022/10/banner-14.jpg')] bg-cover bg-center mid:h-full rounded-xl mt-8">  
-              <div class="card-content flex flex-col items-start rounded-[5px] text-[16px] p-[40px]">
-                <span class="red-bgc bg-partdored text-white rounded-[40px] text-[13px] font-bold py-1 px-[10px]">On Sale This Week</span>
-                <span class="title text-[22px] mid:text-[28px] font-bold mid:w-[350px] mt-[15px] leading-tight">A New Level Of Comfort Tested For Your Safety</span>
-                <span class="desc text-[13px] text-[#646464] mt-[10px] mid:w-[350px]">Plakrore mahetan.Astronens ultranirad.Dod.</span>
-                <span class="shopnow text-[14px] mt-[10px] font-semibold"><a href="">Shop Now <i class="fa-solid fa-arrow-right"></i></a></span>
+            <div class="rounded-xl overflow-hidden mt-8 mid:mt-0">
+              <div class="cards bg-[url('https://klbtheme.com/partdo/wp-content/uploads/2022/10/banner-14.jpg')] bg-cover mid:h-full hover:scale-110 duration-500 cursor-pointer rounded-xl">  
+                <div class="card-content flex flex-col items-start rounded-[5px] text-[16px] p-[40px]">
+                  <span class="red-bgc bg-partdored text-white rounded-[40px] text-[13px] font-bold py-1 px-[10px]">On Sale This Week</span>
+                  <span class="title text-[22px] mid:text-[28px] font-bold mid:w-[350px] mt-[15px] leading-tight">A New Level Of Comfort Tested For Your Safety</span>
+                  <span class="desc text-[13px] text-[#646464] mt-[10px] mid:w-[350px]">Plakrore mahetan.Astronens ultranirad.Dod.</span>
+                  <span class="shopnow text-[14px] mt-[10px] font-semibold"><a href="">Shop Now <i class="fa-solid fa-arrow-right"></i></a></span>
+                </div>
               </div>
             </div>
 
@@ -1162,229 +1210,381 @@
 
           <div class="grayline border-b border-border my-5"></div>
 
-            <div class="products mid:grid mid:grid-cols-3 gap-7">
+            <div class="products mid:grid mid:grid-cols-3 gap-1">
 
               <div class="products-left">
-                <div class="grid grid-cols-2 gap-7">
+                <div class="product-container grid grid-cols-2 ">
 
-                  <div class="img-container group relative ">
-                    <div class="img relative">
-                      <img
-                        src="https://cdn.europosters.eu/image/1300/zen-nature-i49609.jpg"
-                        alt="1000X1000"
-                        class="rounded-[10px]"
-                      />
-                        <span class="sale absolute bg-[#ff1900] text-[12px] font-semibold text-white py-[2px] px-[9px] rounded-[22%] top-[10px] left-[10px]">8%</span>
-                        <span class="heart absolute flex justify-center items-center w-7 h-7 bg-[#f4f4f4] text-[16px] text-black py-[2px] px-[9px] rounded-full top-[10px] right-[10px] hover:bg-[#ffe2e2] hover:text-red cursor-pointer duration-200"><i class="fa-regular fa-heart heart-icon"></i></span>
-                    </div>
-    
-                    <div class="image-desc flex flex-col mt-[15px] ">
-                      <a href="" class="img-title text-[14px] font-bold hover:text-red duration-200 overflow-hidden whitespace-nowrap text-ellipsis">
-                        Thinkware F770 Dash Cam Dual Channel Wifi</a>
-
-                      <div class="star-rating text-[12px] mt-[10px] text-[#e1e1e1]">
-                        <span class="fa fa-star checked star-icon text-yellow-500"></span>
-                        <span class="fa fa-star checked star-icon text-yellow-500"></span>
-                        <span class="fa fa-star checked star-icon text-yellow-500"></span>
-                        <span class="fa fa-star star-icon "></span>
-                        <span class="fa fa-star star-icon"></span>
-                        <span class="review text-[12px] font-semibold ml-[10px] text-black">1 review</span>
-                      </div>
-
-                      <div class="priceandbasket flex justify-between items-center">
-                        <div class="price flex items-end gap-2">
-                          <span class="old-price line-through text-[#787878]">
-                            $268.99
-                          </span>
-                          <span class="new-price text-red text-[19px] font-medium mt-[5px]">
-                            $249.99
-                          </span>
+                  <div class="product mid:hover:shadow-[rgba(0,_0,_0,_0.2)_0px_30px_90px] px-4 py-6 hover:rounded-2xl translate-y-[-10px]  hover:bg-white group relative mid:hover:z-50 ">
+                    <a href="">
+                      <div class="px-[10px] my-auto ">
+                        <div
+                          class="img rounded-[10px] relative border-[1px] border-border"
+                        >
+                          <a href="">
+                            <img
+                              src="https://klbtheme.com/partdo/wp-content/uploads/2022/10/1-37.jpg"
+                              alt="1000X1000"
+                              class="rounded-[10px]"
+                            />
+                          </a>
+                          <a
+                            class="sale absolute bg-red text-[12px] font-bold text-white py-[2px] px-[9px] rounded-[22%] top-[10px] left-[10px]"
+                            >8%</a
+                          >
+                          <span
+                            class="heart absolute flex justify-center items-center w-[30px] h-[30px] bg-[#ffffff] border-[1px] border-border shadow-lg text-[16px] font-bold text-[black] py-[2px] px-[9px] rounded-[50%] top-[10px] right-[10px]"
+                            ><i class="fa-regular fa-heart heart-icon"></i
+                          ></span>
+                        </div>
+        
+                        <div class="image-desc flex flex-col mt-[15px]">
+                          <a
+                            href=""
+                            class="img-title text-[14px] font-bold hover:text-red mmid:text-ellipsis mmid:whitespace-nowrap overflow-hidden product-name-minify">
+                            Thinkware F770 Dash Cam Dual Channel Wifi</a>
+        
+                          <div class="star-rating">
+                            <span
+                              class="fa fa-star checked star-icon text-[10px] mt-[15px] text-[orange]"
+                            ></span>
+                            <span
+                              class="fa fa-star checked star-icon text-[10px] mt-[15px] text-[orange]"
+                            ></span>
+                            <span
+                              class="fa fa-star checked star-icon text-[10px] mt-[15px] text-[orange]"
+                            ></span>
+                            <span
+                              class="fa fa-star star-icon text-[10px] mt-[15px] text-[#dbdbdb]"
+                            ></span>
+                            <span
+                              class="fa fa-star star-icon text-[10px] mt-[15px] text-[#dbdbdb]"
+                            ></span>
+                            <span class="review text-[12px] font-semibold ml-[10px]"
+                              >1 review</span
+                            >
+                          </div>
+        
+                          <div class="priceandbasket flex justify-between items-center">
+                            <div class="price flex items-end gap-3">
+                              <span
+                                class="old-price line-through text-[#555555] text-[16px] mt-[15px]"
+                              >
+                                $268.99
+                              </span>
+                              <span
+                                class="new-price text-[#df1616] text-[19px] font-semibold"
+                              >
+                                $249.99
+                              </span>
+                            </div>
+                          </div>
+        
+                          <div class="stock mt-[8px]">
+                            <span class="text-[12px] font-semibold text-[#257c25]">
+                              <i class="fa-solid fa-cube package mr-[5px]"></i> In Stock
+                            </span>
+                          </div>
+      
+                          <div class="border-t border-border hidden mid:group-hover:block translate-y-[40px] top-[290px] left-0 px-3 py-2 absolute bg-white rounded-b-xl">
+                            <div class="px-2 ">
+                              <ul class="list-disc mt-2 px-4">
+                                <li class="leading-tight text-[13px] text-gray">Best-in-class all-around performance</li>
+                                <li class="leading-tight text-[13px] text-gray">Confident driving in all weather conditions</li>
+                                <li class="leading-tight text-[13px] text-gray">Visual Alignment Indicators</li>
+                              </ul>
+      
+                              <button class="bg-partdored px-4 py-[8px] w-full rounded-xl text-white font-semibold mt-5 group-hover:shadow-[rgba(0,_0,_0,_0.2)_0px_30px_70px]">Add to Cart</button>
+                            </div>
+                          </div>
+        
+                          <div
+                            class="w-full text-center bg-partdored text-white py-2 rounded-xl mt-4 block mid:hidden">
+                            <a href="" class="font-medium">Add to cart</a>
+                          </div>
                         </div>
                       </div>
-
-                      <div class="stock mt-[8px]">
-                        <span class="text-green-900 text-[14px] font-medium">
-                          <i class="fa-solid fa-cube package taxt-[12px]  mr-2"></i> In Stock
-                        </span>
-                      </div>
-
-                      <div class="mid:hidden block" >
-                        <button class="bg-partdored py-[6px] px-4 w-full rounded-lg mt-4 text-white font-bold">Add to Cart</button>
-                      </div>
-
-                      <!-- <div class="hidden group-hover:block absolute top-[320px] bg-white w-full left-0">
-                        <div class="border-b border-border mb-5"></div>
-                        <ul class=" text-[12px]">
-                          <li>Best-in-class all-asround performance</li>
-                          <li>Confident driving in all weather conditions</li>
-                          <li>Visual Alignment Indicators</li>
-                        </ul>
-                        <button class=" bg-partdored py-1 px-4 w-full rounded-lg mt-6">Add to Cart</button>
-                      </div> -->
-                    </div>
-    
+                    </a>
+                    
                   </div>
     
-                  <div class="img-container group relative">
-                    <div class="img relative">
-                      <img
-                        src="https://cdn.europosters.eu/image/1300/zen-nature-i49609.jpg"
-                        alt="1000X1000"
-                        class="rounded-[10px]"
-                      />
-                        <span class="sale absolute bg-[#ff1900] text-[12px] font-semibold text-white py-[2px] px-[9px] rounded-[22%] top-[10px] left-[10px]">8%</span>
-                        <span class="heart absolute flex justify-center items-center w-7 h-7 bg-[#f4f4f4] text-[16px] text-black py-[2px] px-[9px] rounded-full top-[10px] right-[10px] hover:bg-[#ffe2e2] hover:text-red cursor-pointer duration-200"><i class="fa-regular fa-heart heart-icon"></i></span>
-                    </div>
-    
-                    <div class="image-desc flex flex-col mt-[15px] ">
-                      <a href="" class="img-title text-[14px] font-semibold hover:text-red duration-200">
-                        Thinkware F770 Dash Cam Dual Channel Wifi</a>
-
-                      <div class="star-rating text-[12px] mt-[10px] text-[#e1e1e1]">
-                        <span class="fa fa-star checked star-icon text-yellow-500"></span>
-                        <span class="fa fa-star checked star-icon text-yellow-500"></span>
-                        <span class="fa fa-star checked star-icon text-yellow-500"></span>
-                        <span class="fa fa-star star-icon "></span>
-                        <span class="fa fa-star star-icon"></span>
-                        <span class="review text-[12px] font-semibold ml-[10px] text-black">1 review</span>
-                      </div>
-
-                      <div class="priceandbasket flex justify-between items-center">
-                        <div class="price flex items-end gap-2">
-                          <span class="old-price line-through text-[#787878]">
-                            $268.99
-                          </span>
-                          <span class="new-price text-red text-[19px] font-medium mt-[5px]">
-                            $249.99
-                          </span>
+                  <div class="product mid:hover:shadow-[rgba(0,_0,_0,_0.2)_0px_30px_90px] px-4 py-6 hover:rounded-2xl translate-y-[-10px]  hover:bg-white group relative mid:hover:z-50 ">
+                    <a href="">
+                      <div class="px-[10px] my-auto ">
+                        <div
+                          class="img rounded-[10px] relative border-[1px] border-border"
+                        >
+                          <a href="">
+                            <img
+                              src="https://klbtheme.com/partdo/wp-content/uploads/2022/10/1-37.jpg"
+                              alt="1000X1000"
+                              class="rounded-[10px]"
+                            />
+                          </a>
+                          <a
+                            class="sale absolute bg-red text-[12px] font-bold text-white py-[2px] px-[9px] rounded-[22%] top-[10px] left-[10px]"
+                            >8%</a
+                          >
+                          <span
+                            class="heart absolute flex justify-center items-center w-[30px] h-[30px] bg-[#ffffff] border-[1px] border-border shadow-lg text-[16px] font-bold text-[black] py-[2px] px-[9px] rounded-[50%] top-[10px] right-[10px]"
+                            ><i class="fa-regular fa-heart heart-icon"></i
+                          ></span>
+                        </div>
+        
+                        <div class="image-desc flex flex-col mt-[15px]">
+                          <a
+                            href=""
+                            class="img-title text-[14px] font-bold hover:text-red mmid:text-ellipsis mmid:whitespace-nowrap overflow-hidden product-name-minify">
+                            Thinkware F770 Dash Cam Dual Channel Wifi</a>
+        
+                          <div class="star-rating">
+                            <span
+                              class="fa fa-star checked star-icon text-[10px] mt-[15px] text-[orange]"
+                            ></span>
+                            <span
+                              class="fa fa-star checked star-icon text-[10px] mt-[15px] text-[orange]"
+                            ></span>
+                            <span
+                              class="fa fa-star checked star-icon text-[10px] mt-[15px] text-[orange]"
+                            ></span>
+                            <span
+                              class="fa fa-star star-icon text-[10px] mt-[15px] text-[#dbdbdb]"
+                            ></span>
+                            <span
+                              class="fa fa-star star-icon text-[10px] mt-[15px] text-[#dbdbdb]"
+                            ></span>
+                            <span class="review text-[12px] font-semibold ml-[10px]"
+                              >1 review</span
+                            >
+                          </div>
+        
+                          <div class="priceandbasket flex justify-between items-center">
+                            <div class="price flex items-end gap-3">
+                              <span
+                                class="old-price line-through text-[#555555] text-[16px] mt-[15px]"
+                              >
+                                $268.99
+                              </span>
+                              <span
+                                class="new-price text-[#df1616] text-[19px] font-semibold"
+                              >
+                                $249.99
+                              </span>
+                            </div>
+                          </div>
+        
+                          <div class="stock mt-[8px]">
+                            <span class="text-[12px] font-semibold text-[#257c25]">
+                              <i class="fa-solid fa-cube package mr-[5px]"></i> In Stock
+                            </span>
+                          </div>
+      
+                          <div class="border-t border-border hidden mid:group-hover:block translate-y-[40px] top-[290px] left-0 px-3 py-2 absolute bg-white rounded-b-xl">
+                            <div class="px-4 ">
+                              <ul class="list-disc mt-2 px-4">
+                                <li class="leading-tight text-[13px] text-gray">Best-in-class all-around performance</li>
+                                <li class="leading-tight text-[13px] text-gray">Confident driving in all weather conditions</li>
+                                <li class="leading-tight text-[13px] text-gray">Visual Alignment Indicators</li>
+                              </ul>
+      
+                              <button class="bg-partdored px-4 py-[8px] w-full rounded-xl text-white font-semibold mt-5 group-hover:shadow-[rgba(0,_0,_0,_0.2)_0px_30px_70px]">Add to Cart</button>
+                            </div>
+                          </div>
+        
+                          <div
+                            class="w-full text-center bg-partdored text-white py-2 rounded-xl mt-4 block mid:hidden">
+                            <a href="" class="font-medium">Add to cart</a>
+                          </div>
                         </div>
                       </div>
-
-                      <div class="stock mt-[8px]">
-                        <span class="text-green-900 text-[14px] font-medium">
-                          <i class="fa-solid fa-cube package taxt-[12px]  mr-2"></i> In Stock
-                        </span>
-                      </div>
-
-                      <div class="hidden group-hover:block absolute top-[320px] p-5  bg-white w-full left-0">
-                        <div class="border-b border-border mb-5"></div>
-                        <ul class=" text-[12px]">
-                          <li>Best-in-class all-asround performance</li>
-                          <li>Confident driving in all weather conditions</li>
-                          <li>Visual Alignment Indicators</li>
-                        </ul>
-                        <button class="bg-partdored py-1 px-4 w-full rounded-lg mt-6">Add to Cart</button>
-                      </div>
-                    </div>
-    
+                    </a>
+                    
                   </div>
 
-                  <div class="img-container group relative">
-                    <div class="img relative">
-                      <img
-                        src="https://cdn.europosters.eu/image/1300/zen-nature-i49609.jpg"
-                        alt="1000X1000"
-                        class="rounded-[10px]"
-                      />
-                        <span class="sale absolute bg-[#ff1900] text-[12px] font-semibold text-white py-[2px] px-[9px] rounded-[22%] top-[10px] left-[10px]">8%</span>
-                        <span class="heart absolute flex justify-center items-center w-7 h-7 bg-[#f4f4f4] text-[16px] text-black py-[2px] px-[9px] rounded-full top-[10px] right-[10px] hover:bg-[#ffe2e2] hover:text-red cursor-pointer duration-200"><i class="fa-regular fa-heart heart-icon"></i></span>
-                    </div>
-    
-                    <div class="image-desc flex flex-col mt-[15px] ">
-                      <a href="" class="img-title text-[14px] font-semibold hover:text-red duration-200">
-                        Thinkware F770 Dash Cam Dual Channel Wifi</a>
-
-                      <div class="star-rating text-[12px] mt-[10px] text-[#e1e1e1]">
-                        <span class="fa fa-star checked star-icon text-yellow-500"></span>
-                        <span class="fa fa-star checked star-icon text-yellow-500"></span>
-                        <span class="fa fa-star checked star-icon text-yellow-500"></span>
-                        <span class="fa fa-star star-icon "></span>
-                        <span class="fa fa-star star-icon"></span>
-                        <span class="review text-[12px] font-semibold ml-[10px] text-black">1 review</span>
-                      </div>
-
-                      <div class="priceandbasket flex justify-between items-center">
-                        <div class="price flex items-end gap-2">
-                          <span class="old-price line-through text-[#787878]">
-                            $268.99
-                          </span>
-                          <span class="new-price text-red text-[19px] font-medium mt-[5px]">
-                            $249.99
-                          </span>
+                  <div class="product mid:hover:shadow-[rgba(0,_0,_0,_0.2)_0px_30px_90px] px-4 py-6 hover:rounded-2xl translate-y-[-10px]  hover:bg-white group relative mid:hover:z-50 ">
+                    <a href="">
+                      <div class="px-[10px] my-auto ">
+                        <div
+                          class="img rounded-[10px] relative border-[1px] border-border"
+                        >
+                          <a href="">
+                            <img
+                              src="https://klbtheme.com/partdo/wp-content/uploads/2022/10/1-37.jpg"
+                              alt="1000X1000"
+                              class="rounded-[10px]"
+                            />
+                          </a>
+                          <a
+                            class="sale absolute bg-red text-[12px] font-bold text-white py-[2px] px-[9px] rounded-[22%] top-[10px] left-[10px]"
+                            >8%</a
+                          >
+                          <span
+                            class="heart absolute flex justify-center items-center w-[30px] h-[30px] bg-[#ffffff] border-[1px] border-border shadow-lg text-[16px] font-bold text-[black] py-[2px] px-[9px] rounded-[50%] top-[10px] right-[10px]"
+                            ><i class="fa-regular fa-heart heart-icon"></i
+                          ></span>
+                        </div>
+        
+                        <div class="image-desc flex flex-col mt-[15px]">
+                          <a
+                            href=""
+                            class="img-title text-[14px] font-bold hover:text-red mmid:text-ellipsis mmid:whitespace-nowrap overflow-hidden product-name-minify">
+                            Thinkware F770 Dash Cam Dual Channel Wifi</a>
+        
+                          <div class="star-rating">
+                            <span
+                              class="fa fa-star checked star-icon text-[10px] mt-[15px] text-[orange]"
+                            ></span>
+                            <span
+                              class="fa fa-star checked star-icon text-[10px] mt-[15px] text-[orange]"
+                            ></span>
+                            <span
+                              class="fa fa-star checked star-icon text-[10px] mt-[15px] text-[orange]"
+                            ></span>
+                            <span
+                              class="fa fa-star star-icon text-[10px] mt-[15px] text-[#dbdbdb]"
+                            ></span>
+                            <span
+                              class="fa fa-star star-icon text-[10px] mt-[15px] text-[#dbdbdb]"
+                            ></span>
+                            <span class="review text-[12px] font-semibold ml-[10px]"
+                              >1 review</span
+                            >
+                          </div>
+        
+                          <div class="priceandbasket flex justify-between items-center">
+                            <div class="price flex items-end gap-3">
+                              <span
+                                class="old-price line-through text-[#555555] text-[16px] mt-[15px]"
+                              >
+                                $268.99
+                              </span>
+                              <span
+                                class="new-price text-[#df1616] text-[19px] font-semibold"
+                              >
+                                $249.99
+                              </span>
+                            </div>
+                          </div>
+        
+                          <div class="stock mt-[8px]">
+                            <span class="text-[12px] font-semibold text-[#257c25]">
+                              <i class="fa-solid fa-cube package mr-[5px]"></i> In Stock
+                            </span>
+                          </div>
+      
+                          <div class="border-t border-border hidden mid:group-hover:block translate-y-[40px] top-[290px] left-0 px-3 py-2 absolute bg-white rounded-b-xl">
+                            <div class="px-4 ">
+                              <ul class="list-disc mt-2 px-4">
+                                <li class="leading-tight text-[13px] text-gray">Best-in-class all-around performance</li>
+                                <li class="leading-tight text-[13px] text-gray">Confident driving in all weather conditions</li>
+                                <li class="leading-tight text-[13px] text-gray">Visual Alignment Indicators</li>
+                              </ul>
+      
+                              <button class="bg-partdored px-4 py-[8px] w-full rounded-xl text-white font-semibold mt-5 group-hover:shadow-[rgba(0,_0,_0,_0.2)_0px_30px_70px]">Add to Cart</button>
+                            </div>
+                          </div>
+        
+                          <div
+                            class="w-full text-center bg-partdored text-white py-2 rounded-xl mt-4 block mid:hidden">
+                            <a href="" class="font-medium">Add to cart</a>
+                          </div>
                         </div>
                       </div>
-
-                      <div class="stock mt-[8px]">
-                        <span class="text-green-900 text-[14px] font-medium">
-                          <i class="fa-solid fa-cube package taxt-[12px]  mr-2"></i> In Stock
-                        </span>
-                      </div>
-
-                      <div class="hidden group-hover:block absolute top-[320px] p-5  bg-white w-full left-0">
-                        <div class="border-b border-border mb-5"></div>
-                        <ul class=" text-[12px]">
-                          <li>Best-in-class all-asround performance</li>
-                          <li>Confident driving in all weather conditions</li>
-                          <li>Visual Alignment Indicators</li>
-                        </ul>
-                        <button class="bg-partdored py-1 px-4 w-full rounded-lg mt-6">Add to Cart</button>
-                      </div>
-                    </div>
-    
+                    </a>
+                    
                   </div>
 
-                  <div class="img-container group relative">
-                    <div class="img relative">
-                      <img
-                        src="https://cdn.europosters.eu/image/1300/zen-nature-i49609.jpg"
-                        alt="1000X1000"
-                        class="rounded-[10px]"
-                      />
-                        <span class="sale absolute bg-[#ff1900] text-[12px] font-semibold text-white py-[2px] px-[9px] rounded-[22%] top-[10px] left-[10px]">8%</span>
-                        <span class="heart absolute flex justify-center items-center w-7 h-7 bg-[#f4f4f4] text-[16px] text-black py-[2px] px-[9px] rounded-full top-[10px] right-[10px] hover:bg-[#ffe2e2] hover:text-red cursor-pointer duration-200"><i class="fa-regular fa-heart heart-icon"></i></span>
-                    </div>
-    
-                    <div class="image-desc flex flex-col mt-[15px] ">
-                      <a href="" class="img-title text-[14px] font-semibold hover:text-red duration-200">
-                        Thinkware F770 Dash Cam Dual Channel Wifi</a>
-
-                      <div class="star-rating text-[12px] mt-[10px] text-[#e1e1e1]">
-                        <span class="fa fa-star checked star-icon text-yellow-500"></span>
-                        <span class="fa fa-star checked star-icon text-yellow-500"></span>
-                        <span class="fa fa-star checked star-icon text-yellow-500"></span>
-                        <span class="fa fa-star star-icon "></span>
-                        <span class="fa fa-star star-icon"></span>
-                        <span class="review text-[12px] font-semibold ml-[10px] text-black">1 review</span>
-                      </div>
-
-                      <div class="priceandbasket flex justify-between items-center">
-                        <div class="price flex items-end gap-2">
-                          <span class="old-price line-through text-[#787878]">
-                            $268.99
-                          </span>
-                          <span class="new-price text-red text-[19px] font-medium mt-[5px]">
-                            $249.99
-                          </span>
+                  <div class="product mid:hover:shadow-[rgba(0,_0,_0,_0.2)_0px_30px_90px] px-4 py-6 hover:rounded-2xl translate-y-[-10px]  hover:bg-white group relative mid:hover:z-50 ">
+                    <a href="">
+                      <div class="px-[10px] my-auto ">
+                        <div
+                          class="img rounded-[10px] relative border-[1px] border-border"
+                        >
+                          <a href="">
+                            <img
+                              src="https://klbtheme.com/partdo/wp-content/uploads/2022/10/1-37.jpg"
+                              alt="1000X1000"
+                              class="rounded-[10px]"
+                            />
+                          </a>
+                          <a
+                            class="sale absolute bg-red text-[12px] font-bold text-white py-[2px] px-[9px] rounded-[22%] top-[10px] left-[10px]"
+                            >8%</a
+                          >
+                          <span
+                            class="heart absolute flex justify-center items-center w-[30px] h-[30px] bg-[#ffffff] border-[1px] border-border shadow-lg text-[16px] font-bold text-[black] py-[2px] px-[9px] rounded-[50%] top-[10px] right-[10px]"
+                            ><i class="fa-regular fa-heart heart-icon"></i
+                          ></span>
+                        </div>
+        
+                        <div class="image-desc flex flex-col mt-[15px]">
+                          <a
+                            href=""
+                            class="img-title text-[14px] font-bold hover:text-red mmid:text-ellipsis mmid:whitespace-nowrap overflow-hidden product-name-minify">
+                            Thinkware F770 Dash Cam Dual Channel Wifi</a>
+        
+                          <div class="star-rating">
+                            <span
+                              class="fa fa-star checked star-icon text-[10px] mt-[15px] text-[orange]"
+                            ></span>
+                            <span
+                              class="fa fa-star checked star-icon text-[10px] mt-[15px] text-[orange]"
+                            ></span>
+                            <span
+                              class="fa fa-star checked star-icon text-[10px] mt-[15px] text-[orange]"
+                            ></span>
+                            <span
+                              class="fa fa-star star-icon text-[10px] mt-[15px] text-[#dbdbdb]"
+                            ></span>
+                            <span
+                              class="fa fa-star star-icon text-[10px] mt-[15px] text-[#dbdbdb]"
+                            ></span>
+                            <span class="review text-[12px] font-semibold ml-[10px]"
+                              >1 review</span
+                            >
+                          </div>
+        
+                          <div class="priceandbasket flex justify-between items-center">
+                            <div class="price flex items-end gap-3">
+                              <span
+                                class="old-price line-through text-[#555555] text-[16px] mt-[15px]"
+                              >
+                                $268.99
+                              </span>
+                              <span
+                                class="new-price text-[#df1616] text-[19px] font-semibold"
+                              >
+                                $249.99
+                              </span>
+                            </div>
+                          </div>
+        
+                          <div class="stock mt-[8px]">
+                            <span class="text-[12px] font-semibold text-[#257c25]">
+                              <i class="fa-solid fa-cube package mr-[5px]"></i> In Stock
+                            </span>
+                          </div>
+      
+                          <div class="border-t border-border hidden mid:group-hover:block translate-y-[40px] top-[290px] left-0 px-3 py-2 absolute bg-white rounded-b-xl">
+                            <div class="px-4 ">
+                              <ul class="list-disc mt-2 px-4">
+                                <li class="leading-tight text-[13px] text-gray">Best-in-class all-around performance</li>
+                                <li class="leading-tight text-[13px] text-gray">Confident driving in all weather conditions</li>
+                                <li class="leading-tight text-[13px] text-gray">Visual Alignment Indicators</li>
+                              </ul>
+      
+                              <button class="bg-partdored px-4 py-[8px] w-full rounded-xl text-white font-semibold mt-5 group-hover:shadow-[rgba(0,_0,_0,_0.2)_0px_30px_70px]">Add to Cart</button>
+                            </div>
+                          </div>
+        
+                          <div
+                            class="w-full text-center bg-partdored text-white py-2 rounded-xl mt-4 block mid:hidden">
+                            <a href="" class="font-medium">Add to cart</a>
+                          </div>
                         </div>
                       </div>
-
-                      <div class="stock mt-[8px]">
-                        <span class="text-green-900 text-[14px] font-medium">
-                          <i class="fa-solid fa-cube package taxt-[12px]  mr-2"></i> In Stock
-                        </span>
-                      </div>
-
-                      <div class="hidden group-hover:block absolute top-[320px] p-5  bg-white w-full left-0">
-                        <div class="border-b border-border mb-5"></div>
-                        <ul class=" text-[12px]">
-                          <li>Best-in-class all-asround performance</li>
-                          <li>Confident driving in all weather conditions</li>
-                          <li>Visual Alignment Indicators</li>
-                        </ul>
-                        <button class="bg-partdored py-1 px-4 w-full rounded-lg mt-6">Add to Cart</button>
-                      </div>
-                    </div>
-    
+                    </a>
+                    
                   </div>
 
                 </div>
@@ -1397,19 +1597,38 @@
 
                     <h4 class="text-[22px] font-bold text-[#e33100]">Timed special offer for you</h4>
                     <p class="text-[13px] leading-tight text-[gray]">Time remaining until the end of the offer; Hurry to take advantage of the offer</p>
-                    <div class="container-countdown">
-                      <div id="countdown ">
-                        <ul class="flex items-center gap-2 mt-[10px]">
-                          <li class="timer bg-gradient-to-br to-[rgb(255,128,0)] from-[rgb(255,0,0)] rounded-[5px] text-white py-[5px] px-2 font-semibold"><span id="days" class="text-[18px]"></span></li>
-                          <li>:</li>
-                          <li class="timer bg-gradient-to-br to-[rgb(255,128,0)] from-[rgb(255,0,0)] rounded-[5px] text-white py-[5px] px-2 font-semibold"><span id="hours" class="text-[18px]"></span></li>
-                          <li>:</li>
-                          <li class="timer bg-gradient-to-br to-[rgb(255,128,0)] from-[rgb(255,0,0)] rounded-[5px] text-white py-[5px] px-2 font-semibold"><span id="minutes" class="text-[18px]"></span></li>
-                          <li>:</li>
-                          <li class="timer bg-gradient-to-br to-[rgb(255,128,0)] from-[rgb(255,0,0)] rounded-[5px] text-white py-[5px] px-2 font-semibold"><span id="seconds" class="text-[18px]"></span></li>
-                        </ul>
+                    
+                    <div id="clockdiv2" class="launch-time flex items-center gap-2 mt-[10px]">
+                      <div class="rounded-lg  flex items-center justify-center py-[4px] w-[25px] h-[25px]">
+                        <span id="days2" class="days2 timer bg-gradient-to-br to-[rgb(255,128,0)] from-[rgb(255,0,0)] rounded-[5px] text-white py-[5px] px-2 font-semibold"></span>
+                      </div>
+                      <span class="">:</span>
+                      <div class="rounded-lg  flex items-center justify-center py-[4px] w-[25px] h-[25px]">
+                        <span id="hours2" class="hours2 timer bg-gradient-to-br to-[rgb(255,128,0)] from-[rgb(255,0,0)] rounded-[5px] text-white py-[5px] px-2 font-semibold"></span>
+                      </div>
+                      <span>:</span>
+                      <div class="rounded-lg  flex items-center justify-center py-[4px] w-[25px] h-[25px]">
+                        <span id="minutes2" class="minutes2 timer bg-gradient-to-br to-[rgb(255,128,0)] from-[rgb(255,0,0)] rounded-[5px] text-white py-[5px] px-2 font-semibold"></span>
+                      </div>
+                      <span>:</span>
+                      <div class="rounded-lg  flex items-center justify-center py-[4px] w-[25px] h-[25px]">
+                        <span id="seconds2" class="seconds2 timer bg-gradient-to-br to-[rgb(255,128,0)] from-[rgb(255,0,0)] rounded-[5px] text-white py-[5px] px-2 font-semibold"></span>
                       </div>
                     </div>
+                    
+                    <!-- <div class="container-countdown">
+                      <div id="countdown ">
+                        <ul class="flex items-center gap-2 mt-[10px]">
+                          <li class="timer bg-gradient-to-br to-[rgb(255,128,0)] from-[rgb(255,0,0)] rounded-[5px] text-white py-[5px] px-2 font-semibold"><span id="days" class="days text-[18px]"></span></li>
+                          <li>:</li>
+                          <li class="timer bg-gradient-to-br to-[rgb(255,128,0)] from-[rgb(255,0,0)] rounded-[5px] text-white py-[5px] px-2 font-semibold"><span id="hours" class="hours text-[18px]"></span></li>
+                          <li>:</li>
+                          <li class="timer bg-gradient-to-br to-[rgb(255,128,0)] from-[rgb(255,0,0)] rounded-[5px] text-white py-[5px] px-2 font-semibold"><span id="minutes" class="minutes text-[18px]"></span></li>
+                          <li>:</li>
+                          <li class="timer bg-gradient-to-br to-[rgb(255,128,0)] from-[rgb(255,0,0)] rounded-[5px] text-white py-[5px] px-2 font-semibold"><span id="seconds" class="seconds text-[18px]"></span></li>
+                        </ul>
+                      </div>
+                    </div> -->
 
                   </div>
                   
@@ -1468,226 +1687,378 @@
               </div>
 
               <div class="products-right">
-                <div class="grid grid-cols-2 gap-7 mt-5 mid:mt-0">
+                <div class="product-container grid grid-cols-2 ">
 
-                  <div class="img-container group relative">
-                    <div class="img relative">
-                      <img
-                        src="https://cdn.europosters.eu/image/1300/zen-nature-i49609.jpg"
-                        alt="1000X1000"
-                        class="rounded-[10px]"
-                      />
-                        <span class="sale absolute bg-[#ff1900] text-[12px] font-semibold text-white py-[2px] px-[9px] rounded-[22%] top-[10px] left-[10px]">8%</span>
-                        <span class="heart absolute flex justify-center items-center w-7 h-7 bg-[#f4f4f4] text-[16px] text-black py-[2px] px-[9px] rounded-full top-[10px] right-[10px] hover:bg-[#ffe2e2] hover:text-red cursor-pointer duration-200"><i class="fa-regular fa-heart heart-icon"></i></span>
-                    </div>
-    
-                    <div class="image-desc flex flex-col mt-[15px] ">
-                      <a href="" class="img-title text-[14px] font-bold hover:text-red duration-200">
-                        Thinkware F770 Dash Cam Dual Channel Wifi</a>
-
-                      <div class="star-rating text-[12px] mt-[10px] text-[#e1e1e1]">
-                        <span class="fa fa-star checked star-icon text-yellow-500"></span>
-                        <span class="fa fa-star checked star-icon text-yellow-500"></span>
-                        <span class="fa fa-star checked star-icon text-yellow-500"></span>
-                        <span class="fa fa-star star-icon "></span>
-                        <span class="fa fa-star star-icon"></span>
-                        <span class="review text-[12px] font-semibold ml-[10px] text-black">1 review</span>
-                      </div>
-
-                      <div class="priceandbasket flex justify-between items-center">
-                        <div class="price flex items-end gap-2">
-                          <span class="old-price line-through text-[#787878]">
-                            $268.99
-                          </span>
-                          <span class="new-price text-red text-[19px] font-medium mt-[5px]">
-                            $249.99
-                          </span>
+                  <div class="product mid:hover:shadow-[rgba(0,_0,_0,_0.2)_0px_30px_90px] px-4 py-6 hover:rounded-2xl translate-y-[-10px]  hover:bg-white group relative mid:hover:z-50 ">
+                    <a href="">
+                      <div class="px-[10px] my-auto ">
+                        <div
+                          class="img rounded-[10px] relative border-[1px] border-border"
+                        >
+                          <a href="">
+                            <img
+                              src="https://klbtheme.com/partdo/wp-content/uploads/2022/10/1-37.jpg"
+                              alt="1000X1000"
+                              class="rounded-[10px]"
+                            />
+                          </a>
+                          <a
+                            class="sale absolute bg-red text-[12px] font-bold text-white py-[2px] px-[9px] rounded-[22%] top-[10px] left-[10px]"
+                            >8%</a
+                          >
+                          <span
+                            class="heart absolute flex justify-center items-center w-[30px] h-[30px] bg-[#ffffff] border-[1px] border-border shadow-lg text-[16px] font-bold text-[black] py-[2px] px-[9px] rounded-[50%] top-[10px] right-[10px]"
+                            ><i class="fa-regular fa-heart heart-icon"></i
+                          ></span>
+                        </div>
+        
+                        <div class="image-desc flex flex-col mt-[15px]">
+                          <a
+                            href=""
+                            class="img-title text-[14px] font-bold hover:text-red mmid:text-ellipsis mmid:whitespace-nowrap overflow-hidden product-name-minify">
+                            Thinkware F770 Dash Cam Dual Channel Wifi</a>
+        
+                          <div class="star-rating">
+                            <span
+                              class="fa fa-star checked star-icon text-[10px] mt-[15px] text-[orange]"
+                            ></span>
+                            <span
+                              class="fa fa-star checked star-icon text-[10px] mt-[15px] text-[orange]"
+                            ></span>
+                            <span
+                              class="fa fa-star checked star-icon text-[10px] mt-[15px] text-[orange]"
+                            ></span>
+                            <span
+                              class="fa fa-star star-icon text-[10px] mt-[15px] text-[#dbdbdb]"
+                            ></span>
+                            <span
+                              class="fa fa-star star-icon text-[10px] mt-[15px] text-[#dbdbdb]"
+                            ></span>
+                            <span class="review text-[12px] font-semibold ml-[10px]"
+                              >1 review</span
+                            >
+                          </div>
+        
+                          <div class="priceandbasket flex justify-between items-center">
+                            <div class="price flex items-end gap-3">
+                              <span
+                                class="old-price line-through text-[#555555] text-[16px] mt-[15px]"
+                              >
+                                $268.99
+                              </span>
+                              <span
+                                class="new-price text-[#df1616] text-[19px] font-semibold"
+                              >
+                                $249.99
+                              </span>
+                            </div>
+                          </div>
+        
+                          <div class="stock mt-[8px]">
+                            <span class="text-[12px] font-semibold text-[#257c25]">
+                              <i class="fa-solid fa-cube package mr-[5px]"></i> In Stock
+                            </span>
+                          </div>
+      
+                          <div class="border-t border-border hidden mid:group-hover:block translate-y-[40px] top-[290px] left-0 px-3 py-2 absolute bg-white rounded-b-xl">
+                            <div class="px-2 ">
+                              <ul class="list-disc mt-2 px-4">
+                                <li class="leading-tight text-[13px] text-gray">Best-in-class all-around performance</li>
+                                <li class="leading-tight text-[13px] text-gray">Confident driving in all weather conditions</li>
+                                <li class="leading-tight text-[13px] text-gray">Visual Alignment Indicators</li>
+                              </ul>
+      
+                              <button class="bg-partdored px-4 py-[8px] w-full rounded-xl text-white font-semibold mt-5 group-hover:shadow-[rgba(0,_0,_0,_0.2)_0px_30px_70px]">Add to Cart</button>
+                            </div>
+                          </div>
+        
+                          <div
+                            class="w-full text-center bg-partdored text-white py-2 rounded-xl mt-4 block mid:hidden">
+                            <a href="" class="font-medium">Add to cart</a>
+                          </div>
                         </div>
                       </div>
-
-                      <div class="stock mt-[8px]">
-                        <span class="text-green-900 text-[14px] font-medium">
-                          <i class="fa-solid fa-cube package taxt-[12px]  mr-2"></i> In Stock
-                        </span>
-                      </div>
-
-                      <div class="mid:hidden block" >
-                        <button class="bg-partdored py-1 px-4 w-full rounded-lg mt-4 text-white font-bold">Add to Cart</button>
-                      </div>
-
-                      <div class="hidden group-hover:block absolute top-[320px]  bg-white w-full left-0">
-                        <div class="border-b border-border mb-5"></div>
-                        <ul class=" text-[12px]">
-                          <li>Best-in-class all-asround performance</li>
-                          <li>Confident driving in all weather conditions</li>
-                          <li>Visual Alignment Indicators</li>
-                        </ul>
-                        <button class="bg-partdored py-1 px-4 w-full rounded-lg mt-6">Add to Cart</button>
-                      </div>
-                    </div>
-    
+                    </a>
+                    
                   </div>
     
-                  <div class="img-container group relative">
-                    <div class="img relative">
-                      <img
-                        src="https://cdn.europosters.eu/image/1300/zen-nature-i49609.jpg"
-                        alt="1000X1000"
-                        class="rounded-[10px]"
-                      />
-                        <span class="sale absolute bg-[#ff1900] text-[12px] font-semibold text-white py-[2px] px-[9px] rounded-[22%] top-[10px] left-[10px]">8%</span>
-                        <span class="heart absolute flex justify-center items-center w-7 h-7 bg-[#f4f4f4] text-[16px] text-black py-[2px] px-[9px] rounded-full top-[10px] right-[10px] hover:bg-[#ffe2e2] hover:text-red cursor-pointer duration-200"><i class="fa-regular fa-heart heart-icon"></i></span>
-                    </div>
-    
-                    <div class="image-desc flex flex-col mt-[15px] ">
-                      <a href="" class="img-title text-[14px] font-semibold hover:text-red duration-200">
-                        Thinkware F770 Dash Cam Dual Channel Wifi</a>
-
-                      <div class="star-rating text-[12px] mt-[10px] text-[#e1e1e1]">
-                        <span class="fa fa-star checked star-icon text-yellow-500"></span>
-                        <span class="fa fa-star checked star-icon text-yellow-500"></span>
-                        <span class="fa fa-star checked star-icon text-yellow-500"></span>
-                        <span class="fa fa-star star-icon "></span>
-                        <span class="fa fa-star star-icon"></span>
-                        <span class="review text-[12px] font-semibold ml-[10px] text-black">1 review</span>
-                      </div>
-
-                      <div class="priceandbasket flex justify-between items-center">
-                        <div class="price flex items-end gap-2">
-                          <span class="old-price line-through text-[#787878]">
-                            $268.99
-                          </span>
-                          <span class="new-price text-red text-[19px] font-medium mt-[5px]">
-                            $249.99
-                          </span>
+                  <div class="product mid:hover:shadow-[rgba(0,_0,_0,_0.2)_0px_30px_90px] px-4 py-6 hover:rounded-2xl translate-y-[-10px]  hover:bg-white group relative mid:hover:z-50 ">
+                    <a href="">
+                      <div class="px-[10px] my-auto ">
+                        <div
+                          class="img rounded-[10px] relative border-[1px] border-border"
+                        >
+                          <a href="">
+                            <img
+                              src="https://klbtheme.com/partdo/wp-content/uploads/2022/10/1-37.jpg"
+                              alt="1000X1000"
+                              class="rounded-[10px]"
+                            />
+                          </a>
+                          <a
+                            class="sale absolute bg-red text-[12px] font-bold text-white py-[2px] px-[9px] rounded-[22%] top-[10px] left-[10px]"
+                            >8%</a
+                          >
+                          <span
+                            class="heart absolute flex justify-center items-center w-[30px] h-[30px] bg-[#ffffff] border-[1px] border-border shadow-lg text-[16px] font-bold text-[black] py-[2px] px-[9px] rounded-[50%] top-[10px] right-[10px]"
+                            ><i class="fa-regular fa-heart heart-icon"></i
+                          ></span>
+                        </div>
+        
+                        <div class="image-desc flex flex-col mt-[15px]">
+                          <a
+                            href=""
+                            class="img-title text-[14px] font-bold hover:text-red mmid:text-ellipsis mmid:whitespace-nowrap overflow-hidden product-name-minify">
+                            Thinkware F770 Dash Cam Dual Channel Wifi</a>
+        
+                          <div class="star-rating">
+                            <span
+                              class="fa fa-star checked star-icon text-[10px] mt-[15px] text-[orange]"
+                            ></span>
+                            <span
+                              class="fa fa-star checked star-icon text-[10px] mt-[15px] text-[orange]"
+                            ></span>
+                            <span
+                              class="fa fa-star checked star-icon text-[10px] mt-[15px] text-[orange]"
+                            ></span>
+                            <span
+                              class="fa fa-star star-icon text-[10px] mt-[15px] text-[#dbdbdb]"
+                            ></span>
+                            <span
+                              class="fa fa-star star-icon text-[10px] mt-[15px] text-[#dbdbdb]"
+                            ></span>
+                            <span class="review text-[12px] font-semibold ml-[10px]"
+                              >1 review</span
+                            >
+                          </div>
+        
+                          <div class="priceandbasket flex justify-between items-center">
+                            <div class="price flex items-end gap-3">
+                              <span
+                                class="old-price line-through text-[#555555] text-[16px] mt-[15px]"
+                              >
+                                $268.99
+                              </span>
+                              <span
+                                class="new-price text-[#df1616] text-[19px] font-semibold"
+                              >
+                                $249.99
+                              </span>
+                            </div>
+                          </div>
+        
+                          <div class="stock mt-[8px]">
+                            <span class="text-[12px] font-semibold text-[#257c25]">
+                              <i class="fa-solid fa-cube package mr-[5px]"></i> In Stock
+                            </span>
+                          </div>
+      
+                          <div class="border-t border-border hidden mid:group-hover:block translate-y-[40px] top-[290px] left-0 px-3 py-2 absolute bg-white rounded-b-xl">
+                            <div class="px-4 ">
+                              <ul class="list-disc mt-2 px-4">
+                                <li class="leading-tight text-[13px] text-gray">Best-in-class all-around performance</li>
+                                <li class="leading-tight text-[13px] text-gray">Confident driving in all weather conditions</li>
+                                <li class="leading-tight text-[13px] text-gray">Visual Alignment Indicators</li>
+                              </ul>
+      
+                              <button class="bg-partdored px-4 py-[8px] w-full rounded-xl text-white font-semibold mt-5 group-hover:shadow-[rgba(0,_0,_0,_0.2)_0px_30px_70px]">Add to Cart</button>
+                            </div>
+                          </div>
+        
+                          <div
+                            class="w-full text-center bg-partdored text-white py-2 rounded-xl mt-4 block mid:hidden">
+                            <a href="" class="font-medium">Add to cart</a>
+                          </div>
                         </div>
                       </div>
-
-                      <div class="stock mt-[8px]">
-                        <span class="text-green-900 text-[14px] font-medium">
-                          <i class="fa-solid fa-cube package taxt-[12px]  mr-2"></i> In Stock
-                        </span>
-                      </div>
-
-                      <div class="hidden group-hover:block absolute top-[320px] p-5  bg-white w-full left-0">
-                        <div class="border-b border-border mb-5"></div>
-                        <ul class=" text-[12px]">
-                          <li>Best-in-class all-asround performance</li>
-                          <li>Confident driving in all weather conditions</li>
-                          <li>Visual Alignment Indicators</li>
-                        </ul>
-                        <button class="bg-partdored py-1 px-4 w-full rounded-lg mt-6">Add to Cart</button>
-                      </div>
-                    </div>
-    
+                    </a>
+                    
                   </div>
 
-                  <div class="img-container group relative">
-                    <div class="img relative">
-                      <img
-                        src="https://cdn.europosters.eu/image/1300/zen-nature-i49609.jpg"
-                        alt="1000X1000"
-                        class="rounded-[10px]"
-                      />
-                        <span class="sale absolute bg-[#ff1900] text-[12px] font-semibold text-white py-[2px] px-[9px] rounded-[22%] top-[10px] left-[10px]">8%</span>
-                        <span class="heart absolute flex justify-center items-center w-7 h-7 bg-[#f4f4f4] text-[16px] text-black py-[2px] px-[9px] rounded-full top-[10px] right-[10px] hover:bg-[#ffe2e2] hover:text-red cursor-pointer duration-200"><i class="fa-regular fa-heart heart-icon"></i></span>
-                    </div>
-    
-                    <div class="image-desc flex flex-col mt-[15px] ">
-                      <a href="" class="img-title text-[14px] font-semibold hover:text-red duration-200">
-                        Thinkware F770 Dash Cam Dual Channel Wifi</a>
-
-                      <div class="star-rating text-[12px] mt-[10px] text-[#e1e1e1]">
-                        <span class="fa fa-star checked star-icon text-yellow-500"></span>
-                        <span class="fa fa-star checked star-icon text-yellow-500"></span>
-                        <span class="fa fa-star checked star-icon text-yellow-500"></span>
-                        <span class="fa fa-star star-icon "></span>
-                        <span class="fa fa-star star-icon"></span>
-                        <span class="review text-[12px] font-semibold ml-[10px] text-black">1 review</span>
-                      </div>
-
-                      <div class="priceandbasket flex justify-between items-center">
-                        <div class="price flex items-end gap-2">
-                          <span class="old-price line-through text-[#787878]">
-                            $268.99
-                          </span>
-                          <span class="new-price text-red text-[19px] font-medium mt-[5px]">
-                            $249.99
-                          </span>
+                  <div class="product mid:hover:shadow-[rgba(0,_0,_0,_0.2)_0px_30px_90px] px-4 py-6 hover:rounded-2xl translate-y-[-10px]  hover:bg-white group relative mid:hover:z-50 ">
+                    <a href="">
+                      <div class="px-[10px] my-auto ">
+                        <div
+                          class="img rounded-[10px] relative border-[1px] border-border"
+                        >
+                          <a href="">
+                            <img
+                              src="https://klbtheme.com/partdo/wp-content/uploads/2022/10/1-37.jpg"
+                              alt="1000X1000"
+                              class="rounded-[10px]"
+                            />
+                          </a>
+                          <a
+                            class="sale absolute bg-red text-[12px] font-bold text-white py-[2px] px-[9px] rounded-[22%] top-[10px] left-[10px]"
+                            >8%</a
+                          >
+                          <span
+                            class="heart absolute flex justify-center items-center w-[30px] h-[30px] bg-[#ffffff] border-[1px] border-border shadow-lg text-[16px] font-bold text-[black] py-[2px] px-[9px] rounded-[50%] top-[10px] right-[10px]"
+                            ><i class="fa-regular fa-heart heart-icon"></i
+                          ></span>
+                        </div>
+        
+                        <div class="image-desc flex flex-col mt-[15px]">
+                          <a
+                            href=""
+                            class="img-title text-[14px] font-bold hover:text-red mmid:text-ellipsis mmid:whitespace-nowrap overflow-hidden product-name-minify">
+                            Thinkware F770 Dash Cam Dual Channel Wifi</a>
+        
+                          <div class="star-rating">
+                            <span
+                              class="fa fa-star checked star-icon text-[10px] mt-[15px] text-[orange]"
+                            ></span>
+                            <span
+                              class="fa fa-star checked star-icon text-[10px] mt-[15px] text-[orange]"
+                            ></span>
+                            <span
+                              class="fa fa-star checked star-icon text-[10px] mt-[15px] text-[orange]"
+                            ></span>
+                            <span
+                              class="fa fa-star star-icon text-[10px] mt-[15px] text-[#dbdbdb]"
+                            ></span>
+                            <span
+                              class="fa fa-star star-icon text-[10px] mt-[15px] text-[#dbdbdb]"
+                            ></span>
+                            <span class="review text-[12px] font-semibold ml-[10px]"
+                              >1 review</span
+                            >
+                          </div>
+        
+                          <div class="priceandbasket flex justify-between items-center">
+                            <div class="price flex items-end gap-3">
+                              <span
+                                class="old-price line-through text-[#555555] text-[16px] mt-[15px]"
+                              >
+                                $268.99
+                              </span>
+                              <span
+                                class="new-price text-[#df1616] text-[19px] font-semibold"
+                              >
+                                $249.99
+                              </span>
+                            </div>
+                          </div>
+        
+                          <div class="stock mt-[8px]">
+                            <span class="text-[12px] font-semibold text-[#257c25]">
+                              <i class="fa-solid fa-cube package mr-[5px]"></i> In Stock
+                            </span>
+                          </div>
+      
+                          <div class="border-t border-border hidden mid:group-hover:block translate-y-[40px] top-[290px] left-0 px-3 py-2 absolute bg-white rounded-b-xl">
+                            <div class="px-4 ">
+                              <ul class="list-disc mt-2 px-4">
+                                <li class="leading-tight text-[13px] text-gray">Best-in-class all-around performance</li>
+                                <li class="leading-tight text-[13px] text-gray">Confident driving in all weather conditions</li>
+                                <li class="leading-tight text-[13px] text-gray">Visual Alignment Indicators</li>
+                              </ul>
+      
+                              <button class="bg-partdored px-4 py-[8px] w-full rounded-xl text-white font-semibold mt-5 group-hover:shadow-[rgba(0,_0,_0,_0.2)_0px_30px_70px]">Add to Cart</button>
+                            </div>
+                          </div>
+        
+                          <div
+                            class="w-full text-center bg-partdored text-white py-2 rounded-xl mt-4 block mid:hidden">
+                            <a href="" class="font-medium">Add to cart</a>
+                          </div>
                         </div>
                       </div>
-
-                      <div class="stock mt-[8px]">
-                        <span class="text-green-900 text-[14px] font-medium">
-                          <i class="fa-solid fa-cube package taxt-[12px]  mr-2"></i> In Stock
-                        </span>
-                      </div>
-
-                      <div class="hidden group-hover:block absolute top-[320px] p-5  bg-white w-full left-0">
-                        <div class="border-b border-border mb-5"></div>
-                        <ul class=" text-[12px]">
-                          <li>Best-in-class all-asround performance</li>
-                          <li>Confident driving in all weather conditions</li>
-                          <li>Visual Alignment Indicators</li>
-                        </ul>
-                        <button class="bg-partdored py-1 px-4 w-full rounded-lg mt-6">Add to Cart</button>
-                      </div>
-                    </div>
-    
+                    </a>
+                    
                   </div>
 
-                  <div class="img-container group relative">
-                    <div class="img relative">
-                      <img
-                        src="https://cdn.europosters.eu/image/1300/zen-nature-i49609.jpg"
-                        alt="1000X1000"
-                        class="rounded-[10px]"
-                      />
-                        <span class="sale absolute bg-[#ff1900] text-[12px] font-semibold text-white py-[2px] px-[9px] rounded-[22%] top-[10px] left-[10px]">8%</span>
-                        <span class="heart absolute flex justify-center items-center w-7 h-7 bg-[#f4f4f4] text-[16px] text-black py-[2px] px-[9px] rounded-full top-[10px] right-[10px] hover:bg-[#ffe2e2] hover:text-red cursor-pointer duration-200"><i class="fa-regular fa-heart heart-icon"></i></span>
-                    </div>
-    
-                    <div class="image-desc flex flex-col mt-[15px] ">
-                      <a href="" class="img-title text-[14px] font-semibold hover:text-red duration-200">
-                        Thinkware F770 Dash Cam Dual Channel Wifi</a>
-
-                      <div class="star-rating text-[12px] mt-[10px] text-[#e1e1e1]">
-                        <span class="fa fa-star checked star-icon text-yellow-500"></span>
-                        <span class="fa fa-star checked star-icon text-yellow-500"></span>
-                        <span class="fa fa-star checked star-icon text-yellow-500"></span>
-                        <span class="fa fa-star star-icon "></span>
-                        <span class="fa fa-star star-icon"></span>
-                        <span class="review text-[12px] font-semibold ml-[10px] text-black">1 review</span>
-                      </div>
-
-                      <div class="priceandbasket flex justify-between items-center">
-                        <div class="price flex items-end gap-2">
-                          <span class="old-price line-through text-[#787878]">
-                            $268.99
-                          </span>
-                          <span class="new-price text-red text-[19px] font-medium mt-[5px]">
-                            $249.99
-                          </span>
+                  <div class="product mid:hover:shadow-[rgba(0,_0,_0,_0.2)_0px_30px_90px] px-4 py-6 hover:rounded-2xl translate-y-[-10px]  hover:bg-white group relative mid:hover:z-50 ">
+                    <a href="">
+                      <div class="px-[10px] my-auto ">
+                        <div
+                          class="img rounded-[10px] relative border-[1px] border-border"
+                        >
+                          <a href="">
+                            <img
+                              src="https://klbtheme.com/partdo/wp-content/uploads/2022/10/1-37.jpg"
+                              alt="1000X1000"
+                              class="rounded-[10px]"
+                            />
+                          </a>
+                          <a
+                            class="sale absolute bg-red text-[12px] font-bold text-white py-[2px] px-[9px] rounded-[22%] top-[10px] left-[10px]"
+                            >8%</a
+                          >
+                          <span
+                            class="heart absolute flex justify-center items-center w-[30px] h-[30px] bg-[#ffffff] border-[1px] border-border shadow-lg text-[16px] font-bold text-[black] py-[2px] px-[9px] rounded-[50%] top-[10px] right-[10px]"
+                            ><i class="fa-regular fa-heart heart-icon"></i
+                          ></span>
+                        </div>
+        
+                        <div class="image-desc flex flex-col mt-[15px]">
+                          <a
+                            href=""
+                            class="img-title text-[14px] font-bold hover:text-red mmid:text-ellipsis mmid:whitespace-nowrap overflow-hidden product-name-minify">
+                            Thinkware F770 Dash Cam Dual Channel Wifi</a>
+        
+                          <div class="star-rating">
+                            <span
+                              class="fa fa-star checked star-icon text-[10px] mt-[15px] text-[orange]"
+                            ></span>
+                            <span
+                              class="fa fa-star checked star-icon text-[10px] mt-[15px] text-[orange]"
+                            ></span>
+                            <span
+                              class="fa fa-star checked star-icon text-[10px] mt-[15px] text-[orange]"
+                            ></span>
+                            <span
+                              class="fa fa-star star-icon text-[10px] mt-[15px] text-[#dbdbdb]"
+                            ></span>
+                            <span
+                              class="fa fa-star star-icon text-[10px] mt-[15px] text-[#dbdbdb]"
+                            ></span>
+                            <span class="review text-[12px] font-semibold ml-[10px]"
+                              >1 review</span
+                            >
+                          </div>
+        
+                          <div class="priceandbasket flex justify-between items-center">
+                            <div class="price flex items-end gap-3">
+                              <span
+                                class="old-price line-through text-[#555555] text-[16px] mt-[15px]"
+                              >
+                                $268.99
+                              </span>
+                              <span
+                                class="new-price text-[#df1616] text-[19px] font-semibold"
+                              >
+                                $249.99
+                              </span>
+                            </div>
+                          </div>
+        
+                          <div class="stock mt-[8px]">
+                            <span class="text-[12px] font-semibold text-[#257c25]">
+                              <i class="fa-solid fa-cube package mr-[5px]"></i> In Stock
+                            </span>
+                          </div>
+      
+                          <div class="border-t border-border hidden mid:group-hover:block translate-y-[40px] top-[290px] left-0 px-3 py-2 absolute bg-white rounded-b-xl">
+                            <div class="px-4 ">
+                              <ul class="list-disc mt-2 px-4">
+                                <li class="leading-tight text-[13px] text-gray">Best-in-class all-around performance</li>
+                                <li class="leading-tight text-[13px] text-gray">Confident driving in all weather conditions</li>
+                                <li class="leading-tight text-[13px] text-gray">Visual Alignment Indicators</li>
+                              </ul>
+      
+                              <button class="bg-partdored px-4 py-[8px] w-full rounded-xl text-white font-semibold mt-5 group-hover:shadow-[rgba(0,_0,_0,_0.2)_0px_30px_70px]">Add to Cart</button>
+                            </div>
+                          </div>
+        
+                          <div
+                            class="w-full text-center bg-partdored text-white py-2 rounded-xl mt-4 block mid:hidden">
+                            <a href="" class="font-medium">Add to cart</a>
+                          </div>
                         </div>
                       </div>
-
-                      <div class="stock mt-[8px]">
-                        <span class="text-green-900 text-[14px] font-medium">
-                          <i class="fa-solid fa-cube package taxt-[12px]  mr-2"></i> In Stock
-                        </span>
-                      </div>
-
-                      <div class="hidden group-hover:block absolute top-[320px] p-5  bg-white w-full left-0">
-                        <div class="border-b border-border mb-5"></div>
-                        <ul class=" text-[12px]">
-                          <li>Best-in-class all-asround performance</li>
-                          <li>Confident driving in all weather conditions</li>
-                          <li>Visual Alignment Indicators</li>
-                        </ul>
-                        <button class="bg-partdored py-1 px-4 w-full rounded-lg mt-6">Add to Cart</button>
-                      </div>
-                    </div>
-    
+                    </a>
+                    
                   </div>
 
                 </div>
@@ -2529,7 +2900,7 @@
 
     <footer>
       <div class="footer bg-[#212126] mb-[40px] md:mb-0">
-        <div class="mobile:container mx-auto w-full xl:px-[150px]">
+        <div class="mobile:container mx-auto w-full">
           <div class="footer-inner flex mid:py-[80px] py-[25px] mid:flex-row flex-col w-full">
             <div class="column-left-container pb-5 mid:max-w-[340px]">
               <div class="logo mb-[20px]">
@@ -2607,10 +2978,10 @@
               </div>
 
               <div class="column-small">
-                <h4 class="text-white mb-[20px] font-semibold mt-5 mid:m-0">
+                <h4 class="text-white mb-[20px] text-[16px] font-semibold mt-5 mid:m-0">
                   Store Information
                 </h4>
-                <ul>
+                <ul class="flex flex-col gap-2 mt-2">
                   <li>
                     <a href="" class="text-[15px] text-white"
                       >About Partdo Store</a
@@ -2725,230 +3096,36 @@
   </body>
 
   <script src="
-https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js">
-</script>
+  https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js">
+  </script> 
 
+  <script src="./styles/js/index.js"></script>
+      
   <script>
-    function openCity(evt, cityName) {
-      var i, tabcontent, tablinks;
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-      }
-      tablinks = document.getElementsByClassName("tablinks");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-      }
-      document.getElementById(cityName).style.display = "block";
-      evt.currentTarget.className += " active";
-    }
+    // Get the modal and buttons
+    var modal = document.getElementById("myModal");
+    var openBtn = document.getElementById("openModal");
+    var closeBtn = document.getElementById("closeModal");
 
-    // Get the element with id="defaultOpen" and click on it
-    document.getElementById("defaultOpen").click();
-  </script>
+    // Open the modal when the "Open Modal" button is clicked
+    openBtn.addEventListener("click", function () {
+      modal.classList.remove("hidden")
+        modal.classList.add("block")
+        modal.classList.add("opacity-100")
+    });
 
-  <script>
-  (function () {
-    const second = 1000,
-          minute = second * 60,
-          hour = minute * 60,
-          day = hour * 24;
-  
-    //I'm adding this section so I don't have to keep updating this pen every year :-)
-    //remove this if you don't need it
-    let today = new Date(),
-        dd = String(today.getDate()).padStart(2, "0"),
-        mm = String(today.getMonth() + 1).padStart(2, "0"),
-        yyyy = today.getFullYear(),
-        nextYear = yyyy + 1,
-        dayMonth = "09/30/",
-        birthday = dayMonth + yyyy;
-    
-    today = mm + "/" + dd + "/" + yyyy;
-    if (today > birthday) {
-      birthday = dayMonth + nextYear;
-    }
-    //end
-    
-    const countDown = new Date(birthday).getTime(),
-        x = setInterval(function() {    
-  
-          const now = new Date().getTime(), 
-                distance = countDown - now;
-  
-          document.getElementById("days").innerText = Math.floor( distance / (day)),
-            document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
-            document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
-            document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
-  
-          //do something later when date is reached
-          if (distance < 0) {
-            document.getElementById("headline").innerText = "It's my birthday!";
-            document.getElementById("countdown").style.display = "none";
-            document.getElementById("content").style.display = "block";
-            clearInterval(x);
-          }
-          //seconds
-        }, 0)
-    }());</script>
+    // Close the modal when the "Close Modal" button is clicked
+    closeBtn.addEventListener("click", function () {
+      modal.classList.remove("block")
+      modal.classList.add("hidden")
 
+    });
 
-    <!-- date time -->
-    <script>
-    const newDate = new Date('sep 12 23 23:59:59').getTime()
-      const countdown = setInterval(() =>{
-        
-      const date = new Date().getTime()
-      const diff = newDate - date
-      
-      const month =  Math.floor((diff % (1000 * 60 * 60 * 24 * (365.25 / 12) * 365)) / (1000 * 60 * 60 * 24 * (365.25 / 12)))
-      const days = Math.floor(diff % (1000 * 60 * 60 * 24 * (365.25 / 12)) / (1000 * 60 * 60 * 24))
-      const hours =  Math.floor(diff % (1000 * 60 * 60 * 24) / (1000 * 60 * 60))
-      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))
-      const seconds = Math.floor((diff % (1000 * 60)) / 1000)
-      
-            document.querySelector(".seconds").innerHTML = seconds < 10 ? '0' + seconds : seconds
-            document.querySelector(".minutes").innerHTML = minutes < 10 ? '0' + minutes :minutes
-            document.querySelector(".hours").innerHTML = hours < 10 ? '0' + hours : hours
-            document.querySelector(".days").innerHTML = days < 10 ? '0' + days : days
-            document.querySelector(".months").innerHTML = month < 10 ? '0' + month : month
-      
-      if(diff === 0){
-        clearInterval(countdown)
-              document.querySelector(".countdown").innerHTML = 'Happy Birthday Ahmed'
-      }
-      
-      }, 1000) 
-      </script>
-
-      <!-- tab-menu slider -->
-<script>
- jQuery("#carousel").owlCarousel({
-  autoplay: false,
-  rewind: true, /* use rewind if you don't want loop */
-  margin: 20,
-   /*
-  animateOut: 'fadeOut',
-  animateIn: 'fadeIn',
-  */
-  responsiveClass: true,
-  autoHeight: true,
-  autoplayTimeout: 7000,
-  smartSpeed: 800,
-  nav: true,
-  responsive: {
-    0: {
-      items: 1
-    },
-
-    600: {
-      items: 3
-    },
-
-    1024: {
-      items: 3
-    },
-
-    1366: {
-      items: 5
-    }
-  }
-});
+    // Close the modal when the overlay is clicked
+    modal.addEventListener("click", function (event) {
+        if (event.target === modal) {
+          modal.classList.remove("block")
+      modal.classList.add("hidden")        }
+    });
 </script>
-
-      <!-- slider new -->
-<script>
-  $(document).ready(function() {
-
-var sync1 = $("#sync1");
-var sync2 = $("#sync2");
-var slidesPerPage = 3; //globaly define number of elements per page
-var syncedSecondary = true;
-
-sync1.owlCarousel({
-items: 1,
-slideSpeed: 2000,
-nav: true,
-autoplay: false, 
-dots: true,
-loop: true,
-responsiveRefreshRate: 200,
-navText: ['<svg width="100%" height="100%" viewBox="0 0 11 20"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M9.554,1.001l-8.607,8.607l8.607,8.606"/></svg>', '<svg width="100%" height="100%" viewBox="0 0 11 20" version="1.1"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M1.054,18.214l8.606,-8.606l-8.606,-8.607"/></svg>'],
-}).on('changed.owl.carousel', syncPosition);
-
-sync2
-.on('initialized.owl.carousel', function() {
-    sync2.find(".owl-item").eq(0).addClass("current");
-})
-.owlCarousel({
-    items: slidesPerPage,
-    dots: true,
-    nav: true,
-    smartSpeed: 200,
-    slideSpeed: 500,
-    slideBy: slidesPerPage, //alternatively you can slide by 1, this way the active slide will stick to the first item in the second carousel
-    responsiveRefreshRate: 100
-}).on('changed.owl.carousel', syncPosition2);
-
-function syncPosition(el) {
-//if you set loop to false, you have to restore this next line
-//var current = el.item.index;
-
-//if you disable loop you have to comment this block
-var count = el.item.count - 1;
-var current = Math.round(el.item.index - (el.item.count / 2) - .5);
-
-if (current < 0) {
-    current = count;
-}
-if (current > count) {
-    current = 0;
-}
-
-//end block
-
-sync2
-    .find(".owl-item")
-    .removeClass("current")
-    .eq(current)
-    .addClass("current");
-var onscreen = sync2.find('.owl-item.active').length - 1;
-var start = sync2.find('.owl-item.active').first().index();
-var end = sync2.find('.owl-item.active').last().index();
-
-if (current > end) {
-    sync2.data('owl.carousel').to(current, 100, true);
-}
-if (current < start) {
-    sync2.data('owl.carousel').to(current - onscreen, 100, true);
-}
-}
-
-function syncPosition2(el) {
-if (syncedSecondary) {
-    var number = el.item.index;
-    sync1.data('owl.carousel').to(number, 100, true);
-}
-}
-
-sync2.on("click", ".owl-item", function(e) {
-e.preventDefault();
-var number = $(this).index();
-sync1.data('owl.carousel').to(number, 300, true);
-});
-});
-  
-  </script>
-
-      <!-- hamburger-menu -->
-      <script>
-        function closeNav() {
-          document.getElementById("mySidenav").style.width = "0";
-        }
-        function openNav() {
-          document.getElementById("mySidenav").style.width = "350px";
-        }
-        
-        </script>
-      
 </html>

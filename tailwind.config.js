@@ -75,7 +75,8 @@ content: ["./shop.html","./blogs.html","./blog-single.html","./about-us.html",".
 
       animation: {
         colorr: 'colorr 12s ease-in-out infinite'
-      }
+      },
+
     },
   },
   plugins: [],
